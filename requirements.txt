@@ -1,4 +1,5 @@
-ultralytics
 roboflow
-opencv-python
+ultralytics
 matplotlib
+# pillow est inclus avec matplotlib/ultralytics, mais tu peux l'ajouter
+pillow
