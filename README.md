@@ -1,24 +1,22 @@
-# ☀️ Solar Panel Segmentation (YOLOv11)
+# Solar Panel Detection & Segmentation (USMB)
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
-![YOLO](https://img.shields.io/badge/YOLO-v11-green)
-![Roboflow](https://img.shields.io/badge/Data-Roboflow-purple)
+This project focuses on detecting and segmenting photovoltaic panels on rooftops using aerial imagery. It was developed as part of a project at Université Savoie Mont Blanc.
 
-This project leverages State-of-the-Art (SOTA) computer vision to automatically detect and segment photovoltaic panels from aerial imagery (satellite or drone).
+We use the **YOLOv11-Large** model for instance segmentation to accurately estimate the surface area of the panels.
 
-Unlike standard object detection (bounding boxes), this project uses **Instance Segmentation** to outline the exact shape of the panels, allowing for precise surface area estimation ($m^2$) and better handling of inclined roofs.
+## Project Structure
 
-## 🖼️ Demo
-*(Place a screenshot of your results here. E.g., an image showing the colored masks on a roof)*
-![Result Example](https://raw.githubusercontent.com/ultralytics/assets/main/yolov8/banner-yolov8.png)
+* `scripts/`: Python scripts for training and evaluation.
+* `notebooks/`: Jupyter notebooks used for initial experiments on Google Colab.
+* `requirements.txt`: List of dependencies.
 
-## 🚀 Key Features
-- **Instance Segmentation**: Pixel-perfect masking of solar panels using YOLOv11-Large-Seg.
-- **Automated Pipeline**: Dataset management and preprocessing via Roboflow API.
-- **High Precision**: Optimized for aerial views (USMB/Savoie dataset).
-- **Scalable**: Ready for training on GPU (Google Colab T4/A100).
+## Dataset
 
-## 🛠️ Installation
+The dataset is managed via **Roboflow**. It contains annotated images of rooftops with solar panels.
+The script automatically downloads the latest version of the dataset using the Roboflow API.
 
-1. **Clone the repository**
+## How to Run
+
+1. **Install dependencies:**
    ```bash
+   pip install -r requirements.txt
