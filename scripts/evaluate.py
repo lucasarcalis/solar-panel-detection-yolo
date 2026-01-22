@@ -39,4 +39,5 @@ def plot_model_metrics(metrics_dict):
 # from ultralytics import YOLO
 # model = YOLO("path/to/best.pt")
 # metrics = model.val()
+
 # plot_model_metrics(metrics.results_dict)
